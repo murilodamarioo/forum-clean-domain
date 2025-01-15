@@ -1,6 +1,6 @@
 import { Answer } from '../../enterprise/entities/answer' 
 
-export interface AnswesRespository {
+export interface AnswersRepository {
   
   create(answer: Answer): Promise<void>
 
