@@ -1,5 +1,5 @@
 
-import { InMemoryQuestionsRepository } from 'test/in-memory-questions-reporistoy'
+import { InMemoryQuestionsRepository } from 'test/in-memory-questions-repository'
 import { CreateQuestionUseCase } from './create-question'
 
 let inMemoryQuestionsRepository: InMemoryQuestionsRepository

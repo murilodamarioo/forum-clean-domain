@@ -1,5 +1,5 @@
 
-import { InMemoryQuestionsRepository } from 'test/in-memory-questions-reporistoy'
+import { InMemoryQuestionsRepository } from 'test/in-memory-questions-repository'
 import { GetQuestionBySlugUseCase } from './get-question-by-slug'
 import { makeQuestion } from 'test/factories/make-questions'
 import { Slug } from '../../enterprise/entities/value-objects/slug'
