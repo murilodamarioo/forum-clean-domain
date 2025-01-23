@@ -8,6 +8,8 @@ export interface QuestionRepository {
 
   create(question: Question): Promise<void>
 
+  save(question: Question): Promise<void>
+
   delete(question: Question): Promise<void>
 
 }

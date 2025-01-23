@@ -7,6 +7,10 @@ export class UniqueEntityID {
     return this.value
   }
 
+  toValue() {
+    return this.value
+  }
+
   get id() {
     return this.value
   }
