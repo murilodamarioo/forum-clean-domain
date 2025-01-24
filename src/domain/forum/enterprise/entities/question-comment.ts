@@ -6,14 +6,14 @@ export interface QuestionCommentsProps extends CommentProps {
   questionId: UniqueEntityID
 }
 
-export class QuestionComments extends Comment<QuestionCommentsProps> {
+export class QuestionComment extends Comment<QuestionCommentsProps> {
   
   get questionId() {
     return this.props.questionId
   }
 
   static create(props: Optional<QuestionCommentsProps, 'createdAt'>, id?: UniqueEntityID) {
-    const questionComments = new QuestionComments({
+    const questionComments = new QuestionComment({
       ...props,
       createdAt: props.createdAt ?? new Date()
     }, id)
