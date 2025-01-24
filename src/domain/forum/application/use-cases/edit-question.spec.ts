@@ -13,7 +13,7 @@ describe('Edit question', () => {
     sut = new EditQuestionUseCase(inMemoryQuestionsRepository)
   })
   
-  it('should be able to delete a question', async () => {
+  it('should be able to edit a question', async () => {
     const newQuestion = makeQuestion({
       authorId: new UniqueEntityID('author-1')
     }, new UniqueEntityID('question-1'))
@@ -33,7 +33,7 @@ describe('Edit question', () => {
     })
   })
 
-  it('should not be able to delete a question from another user', async () => {
+  it('should not be able to edit a question from another user', async () => {
     const newQuestion = makeQuestion({
       authorId: new UniqueEntityID('author-1')
     }, new UniqueEntityID('question-1'))
