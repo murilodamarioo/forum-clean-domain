@@ -23,7 +23,7 @@ export class CommentOnAnswerUseCase {
     const question  = this.answersRepository.findById(answerId)
 
     if(!question) {
-      throw new Error('Question not found')
+      throw new Error('Answer not found')
     }
 
     const answerComment = AnswerComment.create({
