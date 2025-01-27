@@ -15,15 +15,19 @@ describe('Get question by slug', () => {
   
   test('should be able to get a question by slug', async () => {
     const newQuestion = makeQuestion({
-      slug: Slug.create('example-question')
+      slug: Slug.create('example-question'),
     })
-    
-    inMemoryQuestionsRepository.create(newQuestion)
 
-    const { question } = await sut.execute({
-      slug: 'example-question'
+    await inMemoryQuestionsRepository.create(newQuestion)
+
+    const result = await sut.execute({
+      slug: 'example-question',
     })
-  
-    expect(question.id).toBeTruthy()
+
+    expect(result.value).toMatchObject({
+      question: expect.objectContaining({
+        title: newQuestion.title,
+      }),
+    })
   })
 })
