@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
-    "test:wacth": "vitest"
+    "test:watch": "vitest"
   },
   "keywords": [],
   "author": "",
